@@ -314,15 +314,22 @@ color: #444444;
 .card-number {
     font-size: 32px;
     font-weight: bold;
-    color: #e26c3b;
+    color:#E4875D;
     margin-bottom: 10px;
 }
 
 /* Card Heading */
 .card h2 {
     font-size: 20px;
-    color: #e26c3b;
+    color: #E4875D;
     margin-bottom: 10px;
+    font-family: Helvetica Neue;
+font-weight: 700;
+font-size: 24px;
+line-height: 24.16px;
+letter-spacing: -3%;
+text-align: center;
+
 }
 
 /* Card Text */
@@ -337,7 +344,7 @@ color: #444444;
 }
 
 .demo-btn {
-    background-color: #e26c3b;
+    background-color: #E4875D;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -435,7 +442,7 @@ color: #444444;
 /* Styled Button */
 .button-container a {
     display: inline-block;
-    background-color: #e26c3b;
+    background-color: #E4875D;
     color: white;
     padding: 12px 24px;
     font-size: 18px;
@@ -447,7 +454,7 @@ color: #444444;
 
 /* Hover Effect */
 .button-container a:hover {
-    background-color: #c45a2e;
+    background-color: #E4875D;
     transform: translateY(-2px); /* Slight lift effect */
 }
 
