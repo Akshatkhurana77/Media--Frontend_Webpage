@@ -1,6 +1,7 @@
 body {
     margin: auto;
     padding: 0%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 nav {
@@ -35,10 +36,22 @@ nav {
     font-weight: 500;
 }
 
-.loginbutton, .requestbutton {
+.loginbutton{
     display: inline-block;
     padding: 10px 20px;
-    background-color: lightcoral;
+    background-color: #E4875D1A;
+    color: #E4875D;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.requestbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E4875D;
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -108,10 +121,48 @@ main {
     max-width: 700px;
     margin-bottom: 20px; /* Adds space between text and image */
 }
+.content h1{
+    @media (max-width: 768px) {
+        .mobile-break::after {
+          content: "\a"; /* Line break */
+          white-space: pre;
+        }
+      }
+    
+      /* For laptops (min-width: 769px) */
+      @media (min-width: 769px) {
+        .laptop-break::after {
+          content: "\a"; /* Line break */
+          white-space: pre;
+        }
+      }
+}
 mark{
     background-color: white;
-    color:#ff7b3d;
+    color:#E4875D;
 }
+/*  */
+.contenth1{
+    font-family: Helvetica Neue;
+}
+/*  */
+.mediaplus {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 10px; /* Adjust spacing between elements */
+    justify-content: center;
+  }
+/*  */
+.content p{
+    font-family: Helvetica Neue;
+font-weight: 300;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: -1.8%;
+text-align: center;
+color:#444444;
+}
+/*  */
 
 .video {
     display: flex;
@@ -131,7 +182,7 @@ mark{
 }
 /*  */
 .perfected {
-    background-color: #e26c3b;
+    background-color: #E4875D;
     color: white;
     width: 100%;
     text-align: center;
@@ -200,8 +251,15 @@ mark{
 }
 
 .seamless h3 {
-    color: #e26c3b;
+    color: #E4875D;
     font-size: 20px;
+    font-family: Helvetica Neue;
+font-weight: 700;
+font-size: 24px;
+line-height: 24.16px;
+letter-spacing: -3%;
+text-align: center;
+
 }
 
 .seamless h1 {
@@ -210,6 +268,22 @@ mark{
     color: #222;
     margin: 10px auto;
     max-width: 600px;
+    font-family: Helvetica Neue;
+font-weight: 500;
+font-size: 42px;
+line-height: 50.4px;
+letter-spacing: -1.5px;
+text-align: center;
+
+}
+.seamless p{
+    font-family: Helvetica Neue;
+font-weight: 300;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: 0px;
+text-align: center;
+color: #444444;
 }
 
 /* Cards Section */
@@ -392,6 +466,25 @@ mark{
     }
 }
 /*  */
+.whychoose h3{
+    font-family: Helvetica Neue;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24.16px;
+    letter-spacing: -3%;
+    text-align: center;
+    color: #E4875D;    
+}
+.whychoose h1{
+    font-family: Helvetica Neue;
+font-weight: 500;
+font-size: 42px;
+line-height: 50.4px;
+letter-spacing: -1.5px;
+text-align: center;
+color: #333132;
+}
+/*  */
 /* Main Feature Container */
 .feature-container {
     display: flex;
@@ -457,15 +550,15 @@ mark{
 
 /* Different Colors for Active States */
 .option:nth-child(2).active {
-    background: #007bff; /* Blue */
+    background: #AFC3CA; /* Blue */
 }
 
 .option:nth-child(3).active {
-    background: #8B4513; /* Brown */
+    background:#D8C69E; /* Brown */
 }
 
 .option:nth-child(4).active {
-    background: #e26c3b; /* Orange */
+    background: #E4875D; /* Orange */
 }
 
 /* Right Side: Feature Image */
@@ -549,6 +642,11 @@ mark{
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     margin: auto;
+    /* width: 1440;
+height: 998;
+top: 3791px; */
+background-color: #E4875D;
+
 }
 
 /* Testimonial Image */
@@ -656,33 +754,61 @@ mark{
 
 /* Heading */
 .withmedia h3 {
-    color: #c45a2e;
+    color: #E4875D;
     font-size: 1.5rem;
     margin-bottom: 10px;
+    font-family: Helvetica Neue;
+font-weight: 700;
+font-size: 24px;
+line-height: 24.16px;
+letter-spacing: -3%;
+text-align: center;
+
 }
 
 .withmedia h1 {
-    font-size: 2rem;
+    /* font-size: 2rem;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 15px; */
+    font-family: Helvetica Neue;
+font-weight: 500;
+font-size: 42px;
+line-height: 50.4px;
+letter-spacing: -1.5px;
+text-align: center;
+color: #333132;
 }
 
 /* Paragraph */
 .withmedia p {
-    max-width: 600px;
+    /* max-width: 600px;
     font-size: 1.2rem;
     line-height: 1.5;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 20px; */
+    font-family: Helvetica Neue;
+font-weight: 300;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: 0px;
+text-align: center;
+color: #4D4D4D;
 }
 
 /* Video Styling */
 .withmedia video {
-    width: 100%;
+    /* width: 100%;
     max-width: 720px;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out; */
+    width: 1152;
+    height: 627;
+    top: 24.33px;
+    left: 24px;
+    border-radius: 24px;
+    border-width: 1px;
+    
 }
 
 /* Add smooth fade-in for video */
@@ -797,21 +923,40 @@ mark{
 }
 
 .mediaaction h2 {
-    font-size: 1.8rem;
-    color: #E4875D;
+    font-family: Helvetica Neue;
+font-weight: 700;
+font-size: 24px;
+line-height: 24.16px;
+letter-spacing: -3%;
+text-align: center;
+color: #E4875D;
 }
 
 .mediaaction h1 {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
+    font-family: Helvetica Neue;
+font-weight: 500;
+font-size: 42px;
+line-height: 50.4px;
+letter-spacing: -1.5px;
+text-align: center;
+color: #333132;
 }
 
 .mediaaction p {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto 30px;
-    color: #555;
+    color: #555; */
+    font-family: Helvetica Neue;
+font-weight: 300;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: 0px;
+text-align: center;
+color: #4D4D4D;
 }
 
 /* Carousel Container */
@@ -927,6 +1072,25 @@ mark{
     }
 }
 /*  */
+.Explore h2{
+    font-family: Helvetica Neue;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24.16px;
+    letter-spacing: -3%;
+    text-align: center;
+color: #E4875D;    
+}
+.Explore h1{
+    font-family: Helvetica Neue;
+font-weight: 500;
+font-size: 42px;
+line-height: 50.4px;
+letter-spacing: -1.5px;
+text-align: center;
+color:#333132;
+}
+/*  */
 /* Container for Cards */
 .card-container {
     display: grid;
@@ -935,6 +1099,7 @@ mark{
     max-width: 1100px;
     margin: auto;
     padding: 40px 20px;
+    background-color: #AFC3CA33;
 }
 
 /* Individual Cards */
@@ -1047,18 +1212,32 @@ div img {
 .FAQ {
     text-align: center; /* Centers the content */
     padding: 40px 20px; /* Adds spacing around */
+    font-family: Helvetica Neue;
+font-weight: 700;
+font-size: 24px;
+line-height: 24.16px;
+letter-spacing: -3%;
+color: #E4875D;
 }
 
 .FAQ h2 {
-    color: #c45a2e;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-family: Helvetica Neue;
+font-weight: 700;
+font-size: 24px;
+line-height: 24.16px;
+letter-spacing: -3%;
+color: #E4875D;
 }
 
 .FAQ h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
+    color: #333132;
+    font-family: Helvetica Neue;
+font-weight: 500;
+font-size: 48px;
+line-height: 57.6px;
+letter-spacing: -0.8%;
+text-align: center;
+
 }
 
 /* Responsive Design */
@@ -1203,7 +1382,7 @@ div img {
 }
 
 .text-container h1 span {
-    color: #ff7b3d;
+    color:#E4875D;
 }
 
 .text-container img {
@@ -1266,14 +1445,14 @@ div img {
 }
 
 .checkbox a {
-    color: #ff7b3d;
+    color: #E4875D;
     text-decoration: none;
 }
 
 /* Button */
 button {
     width: 100%;
-    background: #ff7b3d;
+    background:#E4875D;
     color: white;
     border: none;
     padding: 12px;
@@ -1284,7 +1463,7 @@ button {
 }
 
 button:hover {
-    background: #e66a2c;
+    background: #E4875D;
 }
 
 /* Responsive Design */
@@ -1337,7 +1516,7 @@ footer {
 .footer-column h4 {
     font-size: 16px;
     margin-bottom: 10px;
-    color: #ff7b3d;
+    color: #E4875D;
 }
 
 .footer-column p {
@@ -1388,7 +1567,7 @@ footer {
 }
 
 .email-input button {
-    background: #ff7b3d;
+    background: #E4875D;
     color: white;
     border: none;
     padding: 10px;
@@ -1398,7 +1577,7 @@ footer {
 }
 
 .email-input button:hover {
-    background: #e66a2c;
+    background: #E4875D;
 }
 
 /* Reviews Section */
@@ -1412,7 +1591,7 @@ footer {
 
 .review-box a {
     display: block;
-    color: #ff7b3d;
+    color: #E4875D;
     text-decoration: none;
     margin-top: 5px;
 }
@@ -1459,7 +1638,7 @@ footer {
 }
 
 .bottom-footer a {
-    color: #ff7b3d;
+    color: #E4875D;
     text-decoration: none;
 }
 
@@ -1543,7 +1722,7 @@ footer {
 }
 
 .footer-column p:hover {
-    color: #ff7b3d;
+    color: #E4875D;
 }
 
 /* Right Side - Contact & Social Media */
@@ -1582,7 +1761,7 @@ footer {
 }
 
 .email-input button {
-    background: #ff7b3d;
+    background: #E4875D;
     color: white;
     border: none;
     padding: 10px;
@@ -1590,7 +1769,7 @@ footer {
 }
 
 .email-input button:hover {
-    background: #e66a2c;
+    background: #E4875D;
 }
 
 /* Review Box */
@@ -1604,7 +1783,7 @@ footer {
 
 .review-box a {
     display: block;
-    color: #ff7b3d;
+    color: #E4875D;
     text-decoration: none;
     margin-top: 5px;
 }
@@ -1662,7 +1841,7 @@ footer {
 }
 
 .bottom-footer a {
-    color: #ff7b3d;
+    color: #E4875D;
     text-decoration: none;
 }
 
@@ -1726,7 +1905,7 @@ footer {
 }
 
 .email-input button {
-    background: #ff7b3d;
+    background:#E4875D;
     color: white;
     border: none;
     padding: 12px 15px;
@@ -1736,7 +1915,7 @@ footer {
 }
 
 .email-input button:hover {
-    background: #e66a2c;
+    background: #E4875D;
 }
 
 /* Responsive Fix */
