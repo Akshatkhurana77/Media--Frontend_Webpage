@@ -14,6 +14,8 @@ nav {
     border: 1.5px solid lightgray;
     border-radius: 25px;
     position: relative;
+    padding-top: 0%;
+    padding-bottom: 0%;
 }
 
 .align {
@@ -182,9 +184,10 @@ color:#444444;
 }
 /*  */
 .perfected {
+    margin: 0%;
     background-color: #E4875D;
     color: white;
-    width: 100%;
+    width: 100vw;
     text-align: center;
     padding: 40px 0;
 }
@@ -214,20 +217,41 @@ color:#444444;
     max-width: 100%;
     object-fit: contain;
     padding: 5px;
+    filter: brightness(0) invert(1);
 }
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
-    .perfected ul {
-        gap: 20px; /* Reduce gap for smaller screens */
-        padding: 0 20px; /* Reduce side padding */
+    .slider {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        width: 100%;
     }
 
-    .perfected ul li img {
-        height: 60px; /* Reduce image height for mobile */
+    #logo-slider {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        padding: 0;
+        width: max-content;
+        animation: moveLoop 10s linear infinite;
+    }
+
+    #logo-slider li {
+        flex-shrink: 0;
+    }
+
+    @keyframes moveLoop {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%); /* Moves exactly one full width left */
+        }
     }
 }
-
 @media (max-width: 480px) {
     .perfected ul {
         flex-direction: column; /* Stack logos vertically */
@@ -297,13 +321,20 @@ color: #444444;
 
 /* Individual Card */
 .card {
-    background: linear-gradient(to bottom, #feece2, #fff);
+    background: linear-gradient(to bottom, #FDF6F4, #FFE9DF);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 280px;
     transition: transform 0.3s ease-in-out;
+    width: 380;
+height: 356;
+top: 62px;
+left: 410px;
+border-radius: 24px;
+border-width: 2px;
+
 }
 
 .card:hover {
@@ -312,6 +343,9 @@ color: #444444;
 
 /* Card Number */
 .card-number {
+    background: linear-gradient(to bottom, #E4875D, #FFCBB4); /* Gradient */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Hide actual text color */
     font-size: 32px;
     font-weight: bold;
     color:#E4875D;
@@ -649,9 +683,11 @@ color: #333132;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     margin: auto;
-    /* width: 1440;
-height: 998;
-top: 3791px; */
+    width: 100%;
+    height: 100%;
+    /* width: 1440px;
+height: 998px;*/
+top: 3791px; 
 background-color: #E4875D;
 
 }
@@ -847,9 +883,9 @@ color: #4D4D4D;
 /*  */
 /* Hero Section */
 .hero {
-    background: linear-gradient(90deg, #e9925c, #f6b47c);
+    background: linear-gradient(270deg, #FFBF84 0%, #F2A370 50%, #E4875D 100%);
+    overflow-x: hidden;
     text-align: center;
-    padding: 120px 20px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -972,6 +1008,10 @@ color: #4D4D4D;
     max-width: 80%; /* Adjusted width */
     margin: 0 auto;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
 }
 
 /* Carousel */
@@ -1024,17 +1064,19 @@ color: #4D4D4D;
 /* Navigation Buttons */
 .prev-btn,
 .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 50px; /* Ensures a fixed size */
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     font-size: 24px;
-    border: none;
-    padding: 12px;
+    border-radius: 50%; /* Keeps button circular */
     cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    flex-shrink: 0; /* Prevents resizing if inside a flex container */
 }
 
 .prev-btn {
@@ -1048,7 +1090,9 @@ color: #4D4D4D;
 .prev-btn:hover,
 .next-btn:hover {
     background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1); /* Slight scaling, but not increasing button size */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -1074,8 +1118,9 @@ color: #4D4D4D;
 
     .prev-btn,
     .next-btn {
+        width: 40px;
+        height: 40px;
         font-size: 20px;
-        padding: 10px;
     }
 }
 /*  */
@@ -1375,6 +1420,8 @@ text-align: center;
     height: 100vh;
     padding: 20px;
     gap: 40px;
+    flex-wrap: wrap; /* Allows better responsiveness */
+    text-align: center;
 }
 
 /* Text Container */
@@ -1386,6 +1433,7 @@ text-align: center;
     font-size: 36px;
     font-weight: bold;
     color: #333;
+    word-break: break-word; /* Prevents text overflow */
 }
 
 .text-container h1 span {
@@ -1400,80 +1448,96 @@ text-align: center;
 /* Form Container */
 .form-container {
     background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Slightly wider form */
 }
 
+/* Form Heading */
 .form-container h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+/* Labels */
 .form-container label {
     font-size: 14px;
     font-weight: bold;
     display: block;
-    margin: 10px 0 5px;
+    margin-bottom: 5px;
+    color: #333;
 }
 
+/* Input Fields */
 .form-container input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f9f9f9;
 }
 
+/* Name Fields */
 .name-fields {
     display: flex;
-    gap: 10px;
+    gap: 15px; /* More spacing */
 }
 
 .name-fields div {
     flex: 1;
 }
 
-/* Checkbox */
+/* Checkbox Section */
 .checkbox {
     display: flex;
-    align-items: flex-start;
-    margin-top: 10px;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1.4;
 }
 
 .checkbox input {
-    margin-top: 5px;
-    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
 }
 
 .checkbox p {
-    font-size: 12px;
     margin: 0;
+    color: #555;
 }
 
+/* Terms Links */
 .checkbox a {
     color: #E4875D;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* Button */
+/* Submit Button */
 button {
     width: 100%;
-    background:#E4875D;
+    background: #E4875D;
     color: white;
     border: none;
-    padding: 12px;
-    border-radius: 5px;
+    padding: 14px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
     margin-top: 15px;
+    transition: 0.3s;
 }
 
 button:hover {
-    background: #E4875D;
+    background: #D8744C;
 }
 
-/* Responsive Design */
+/* Responsive Fix */
 @media (max-width: 1024px) {
     .landing {
         flex-direction: column;
@@ -1486,10 +1550,22 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+    .form-container {
+        width: 100%;
+        max-width: 350px; /* Adjust width for mobile */
+        padding: 25px;
+    }
+
     .text-container h1 {
         font-size: 28px;
+        text-align: center;
+    }
+
+    .name-fields {
+        flex-direction: column; /* Stack name fields */
     }
 }
+
 /*  */
 /* Footer Styling */
 footer {
