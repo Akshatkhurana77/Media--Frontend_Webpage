@@ -15,7 +15,19 @@ function changeWord() {
     }, 500); // Wait for fade out before changing text
 }
 
+
 setInterval(changeWord, 2000); // Change word every 2 seconds
+// 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.getElementById("logo-slider");
+    if (window.innerWidth <= 768) {  // Apply only on mobile
+        const duplicate = slider.innerHTML;  
+        slider.innerHTML += duplicate;  // Append duplicate images
+    }
+});
+
+
 // 
 document.addEventListener("DOMContentLoaded", function () {
     const options = document.querySelectorAll(".option");
@@ -124,6 +136,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (rect.top >= window.innerHeight || rect.bottom <= 0) {
             video.pause();
         }
+    });
+});
+// 
+document.addEventListener("DOMContentLoaded", function () {
+    const faqs = document.querySelectorAll(".faq");
+
+    faqs.forEach(faq => {
+        faq.addEventListener("click", function () {
+            this.classList.toggle("open");
+        });
     });
 });
 // 
