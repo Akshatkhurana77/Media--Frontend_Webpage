@@ -37,6 +37,11 @@ nav {
     font-size: 16px;
     font-weight: 500;
 }
+.login {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center;
+}
 
 .loginbutton{
     display: inline-block;
